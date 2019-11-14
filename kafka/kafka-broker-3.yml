@@ -6,7 +6,7 @@ apiVersion: apps/v1
 
 metadata:
 
-  name: kafka-broker0
+  name: kafka-broker-3
 
 spec:
   selector:
@@ -20,7 +20,7 @@ spec:
 
         app: kafka
 
-        id: "0"
+        id: "3"
 
     spec:
 
@@ -38,7 +38,7 @@ spec:
 
         - name: KAFKA_ADVERTISED_PORT
 
-          value: "31440"
+          value: "31119"
 
         - name: KAFKA_ADVERTISED_HOST_NAME
 
@@ -50,8 +50,4 @@ spec:
 
         - name: KAFKA_BROKER_ID
 
-          value: "0"
-
-        - name: KAFKA_CREATE_TOPICS
-
-          value: admintome-test:1:1
+          value: "3"

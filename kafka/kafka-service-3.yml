@@ -6,7 +6,7 @@ kind: Service
 
 metadata:
 
-  name: kafka-service
+  name: kafka-service-3
 
   labels:
 
@@ -18,6 +18,8 @@ spec:
 
   - port: 9092
 
+    nodePort: 31119
+
     name: kafka-port
 
     protocol: TCP
@@ -26,6 +28,6 @@ spec:
 
     app: kafka
 
-    id: "0"
+    id: "3"
 
   type: LoadBalancer

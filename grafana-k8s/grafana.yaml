@@ -37,6 +37,9 @@ spec:
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
+        env:
+          - name: GF_INSTALL_PLUGINS
+            value: "grafana-kubernetes-app"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler

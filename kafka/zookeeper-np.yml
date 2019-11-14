@@ -1,0 +1,38 @@
+---
+
+apiVersion: v1
+
+kind: Service
+
+metadata:
+
+  name: zoo-np
+
+  labels:
+
+    app: zookeeper-1
+
+spec:
+
+  ports:
+  - name: client
+    nodePort: 32334
+    port: 2181
+
+    protocol: TCP
+
+  - name: follower
+
+    port: 2888
+
+    protocol: TCP
+
+  - name: leader
+
+    port: 3888
+
+    protocol: TCP
+  type: NodePort
+  selector:
+
+    app: zookeeper-1
